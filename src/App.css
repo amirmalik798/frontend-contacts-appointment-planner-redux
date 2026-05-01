@@ -1,0 +1,149 @@
+#root {
+  padding: 30px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.error {
+  color: red;
+}
+
+.nav-link {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  color: #000000;
+  margin-right: 30.5px;
+  text-decoration-line: none;
+}
+
+.nav-bar {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #979797;
+  margin-bottom: 20px;
+}
+
+.nav-link.active {
+  font-weight: bold;
+  color: #0290b9;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 18px;
+  color: #000000;
+  margin: 0;
+  margin-bottom: 18px;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #979797;
+  margin: 20px 0;
+}
+
+input[type="submit"] {
+  background: #03a8d8;
+  border-radius: 4px;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 14px;
+  border: none;
+  outline: none;
+  padding: 10px 0;
+  width: 100%;
+  font-family: "Open Sans", sans-serif;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+
+}
+
+input[type="submit"]:hover {
+  background: #0290b9;
+}
+
+input,
+select {
+  font-family: "Open Sans", sans-serif;
+  background: #ffffff;
+  border: 1px solid #979797;
+  border-radius: 4px;
+  padding: 7px 9.5px 9px 9.5px;
+  outline: none;
+  width: 100%;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  
+}
+
+.tile {
+  margin: 0;
+  font-size: 16px;
+  margin-bottom: 3px;
+}
+
+.tile.tile-title {
+  font-weight: bold;
+}
+
+.tile-container {
+  margin-bottom: 20px;
+  background-color: #0290b9;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+  min-height: 170px;
+  max-height: none;
+  display: grid;
+  align-items: center;
+}
+
+.tile-buttons-container {
+  display: flex;
+  max-height: 30px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.tile-buttons-container button {
+  border: 1px solid gray;
+  border-radius: 2px;
+  margin-right: 5px;
+  min-height: 30px;
+  max-height: 30px;
+  min-width: 50px;
+  max-width: 50px;
+}
+
+
+@media only screen and (max-width: 570px) {
+  .tile-container {
+    min-height: auto;
+    max-height: none;
+    font-size: 16px;
+    display: grid;
+
+  }
+  
+  .tile-buttons-container button {
+    margin-bottom: 5px;
+
+  }
+
+  .tile-container input {
+    max-width: 100%;
+  }
+
+  .tile {
+    max-width: 100%;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
