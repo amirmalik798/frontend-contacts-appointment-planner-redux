@@ -85,7 +85,7 @@ const ContactListItem = ({item}) => {
                     </>
                 )}
             </div>
-            {error && <span styles={{marginTop: '3px'}}>{error}</span>}
+            {error && <span className='error' styles={{marginTop: '3px'}}>{error}</span>}
         </div>
     )
 }
