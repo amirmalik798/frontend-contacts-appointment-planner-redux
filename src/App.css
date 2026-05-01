@@ -1,217 +1,160 @@
-/* =========================
-   BASE RESET
-========================= */
 * {
   box-sizing: border-box;
 }
-
 body {
   line-height: 1.5;
-  background: #f7f7f5;
 }
-
-/* =========================
-   ROOT
-========================= */
 #root {
   padding: 30px;
   font-family: "Open Sans", sans-serif;
 }
 
-/* =========================
-   NAVIGATION
-========================= */
-.nav-bar {
-  padding-bottom: 20px;
-  border-bottom: 1px solid #e6e6e6;
-  margin-bottom: 20px;
+.error {
+  color: red;
 }
 
 .nav-link {
   font-style: normal;
   font-weight: bold;
   font-size: 16px;
-  color: #000;
-  margin-right: 24px;
-  text-decoration: none;
+  color: #000000;
+  margin-right: 30.5px;
+  text-decoration-line: none;
+}
+
+.nav-bar {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #979797;
+  margin-bottom: 20px;
 }
 
 .nav-link.active {
+  font-weight: bold;
   color: #0290b9;
 }
 
-/* =========================
-   HEADINGS
-========================= */
 h2 {
   font-weight: bold;
   font-size: 18px;
-  margin: 0 0 18px 0;
+  color: #000000;
+  margin: 0;
+  margin-bottom: 18px;
 }
 
-/* =========================
-   ERROR
-========================= */
-.error {
-  color: red;
+hr {
+  border: none;
+  border-top: 1px solid #979797;
+  margin: 20px 0;
 }
 
-/* =========================
-   FORM ELEMENTS (Notion-like)
-========================= */
-input,
-select {
-  font-family: inherit;
-  font-size: 15px;
-
-  width: 100%;
-  padding: 8px 10px;
-
-  border: 1px solid #ddd;
-  border-radius: 6px;
-
-  outline: none;
-  margin-bottom: 10px;
-
-  background: #fff;
-}
-
-/* Submit button */
 input[type="submit"] {
   background: #03a8d8;
-  border-radius: 6px;
-  color: #fff;
-
+  border-radius: 4px;
+  color: #ffffff;
   font-weight: bold;
   font-size: 14px;
-
   border: none;
+  outline: none;
   padding: 10px 0;
-
   width: 100%;
+  font-family: "Open Sans", sans-serif;
+  margin-top: 10px;
+  margin-bottom: 10px;
   cursor: pointer;
 
-  margin-top: 10px;
 }
 
 input[type="submit"]:hover {
   background: #0290b9;
 }
 
-/* =========================
-   GRID (FULL RESPONSIVE)
-========================= */
+input,
+select {
+  font-family: "Open Sans", sans-serif;
+  background: #ffffff;
+  border: 1px solid #979797;
+  border-radius: 4px;
+  padding: 7px 9.5px 9px 9.5px;
+  outline: none;
+  width: 100%;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 12px;
-  align-items: start;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  
 }
 
-/* =========================
-   CARD SYSTEM (NOTION STYLE)
-========================= */
-.tile-container {
-  background: #fff;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-
-  padding: 12px;
-  min-height: 170px;
-
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-
-  transition: box-shadow 0.2s ease, transform 0.2s ease;
-}
-
-.tile-container:hover {
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
-  transform: translateY(-2px);
-}
-
-/* =========================
-   TEXT / TILE CONTENT
-   (EDIT + DISPLAY UNIFIED)
-========================= */
 .tile {
   margin: 0;
-  font-size: 15px;
-  line-height: 1.6;
-
-  overflow-wrap: anywhere;
-  word-break: break-word;
+  font-size: 16px;
+  margin-bottom: 3px;
 }
 
 .tile.tile-title {
-  font-weight: 600;
+  font-weight: bold;
 }
 
-/* Make inputs behave like text */
-.tile-container input,
-.tile-container select,
-.tile-container textarea {
-  font: inherit;
-  font-size: 15px;
-  line-height: 1.6;
-  width: 100%;
-  margin: 0;
-  background: #0290b9;
+.tile-container {
+  margin-bottom: 20px;
+  background-color: #0290b9;
+  padding: 10px;
+  border-radius: 5px;
   color: white;
-  border: none;
-  outline: none;
-  background: transparent;
-
-  color: inherit;
-
-  overflow-wrap: anywhere;
+  min-height: 170px;
+  max-height: none;
+  display: grid;
+  align-items: center;
 }
 
-/* =========================
-   BUTTONS
-========================= */
+
+
 .tile-buttons-container {
   display: flex;
-  gap: 6px;
-  flex-wrap: wrap;
+  max-height: 30px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
 
-  margin-top: auto;
+.tile-container * {
+  min-width: 0;
 }
 
 .tile-buttons-container button {
-  font-size: 12px;
-
-  padding: 6px 10px;
-
-  border: 1px solid #ddd;
-  border-radius: 6px;
-
-  background: #fafafa;
-  cursor: pointer;
+  border: 1px solid gray;
+  border-radius: 2px;
+  margin-right: 5px;
+  min-height: 30px;
+  max-height: 30px;
+  min-width: 50px;
+  max-width: 50px;
 }
 
-.tile-buttons-container button:hover {
-  background: #f0f0f0;
-}
 
-/* =========================
-   HORIZONTAL RULE
-========================= */
-hr {
-  border: none;
-  border-top: 1px solid #e6e6e6;
-  margin: 20px 0;
-}
+@media only screen and (max-width: 570px) {
+  .tile-container {
+    min-height: auto;
+    max-height: none;
+    font-size: 16px;
+    display: grid;
 
-/* =========================
-   RESPONSIVE (MOBILE)
-========================= */
-@media (max-width: 600px) {
-  #root {
-    padding: 14px;
+  }
+  
+  .tile-buttons-container button {
+    margin-bottom: 5px;
+
   }
 
+  .tile-container input {
+    max-width: 100%;
+  }
+
+  .tile {
+    max-width: 100%;
+  }
   .grid {
     grid-template-columns: 1fr;
   }
