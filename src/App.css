@@ -111,6 +111,10 @@ select {
   margin-bottom: 5px;
 }
 
+.tile-container * {
+  min-width: 0;
+}
+
 .tile-buttons-container button {
   border: 1px solid gray;
   border-radius: 2px;
