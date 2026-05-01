@@ -36,7 +36,7 @@ const ContactForm = () => {
             return;
         }
         if (email.length > 40) { 
-            setError('Error: Email is Too Long. Max. 30 Characters Allowed.');
+            setError('Error: Email is Too Long. Max. 40 Characters Allowed.');
             return;
         }
         const newContact = {name, phone, email};
