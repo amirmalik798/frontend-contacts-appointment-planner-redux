@@ -17,6 +17,7 @@ const ContactListItem = ({item}) => {
         
     
     const handleCancel = () => {
+        setError('');
         setFormData(item);
         setIsEditing(false);
     }
