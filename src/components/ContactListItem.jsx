@@ -6,6 +6,7 @@ const ContactListItem = ({item}) => {
     const dispatch = useDispatch();
     const [isEditing, setIsEditing] = useState(false);
     const [formData, setFormData] = useState(item);
+    const [error, setError] = useState("");
     
     const handleRemoveItem = () => {
         const confirmed = window.confirm(`Are you sure you want to delete ${item.name}'s contact? `);
@@ -29,8 +30,14 @@ const ContactListItem = ({item}) => {
     }
 
     const handleSave = () => {
+        setError('');
+        if (!formData.name.trim() || !formData.phone.trim() || !formData.email.trim()) {
+            setError('Error: Please Provide Data in Fields.');
+            return;
+        }
         dispatch(editContact(formData));
         setIsEditing(false);
+        setError('');
     }
 
     return (
@@ -78,6 +85,7 @@ const ContactListItem = ({item}) => {
                     </>
                 )}
             </div>
+            {error && <span styles={{marginTop: 3px}}>{error}</span>}
         </div>
     )
 }
