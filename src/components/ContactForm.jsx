@@ -27,20 +27,6 @@ const ContactForm = () => {
             setError('Error: Please Input Data in All Fields.');
             return;
         }
-        /*
-        if (name.length > 30) {
-            setError('Error: Name is Too Long. Max. 30 Characters Allowed.');
-            return;
-        }
-        if (phone.length > 30) {
-            setError('Error: Phone# is Too Long. Max. 30 Characters Allowed.');
-            return;
-        }
-        if (email.length > 40) { 
-            setError('Error: Email is Too Long. Max. 40 Characters Allowed.');
-            return;
-        }
-        */
         const newContact = {name, phone, email};
         //guard clause against duplicate insertions
         if (isDuplicateContact(contacts, newContact)) {
